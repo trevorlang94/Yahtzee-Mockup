@@ -1,0 +1,500 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/file"
+    tools:context="com.example.main.yahtzeemockup.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription=""
+        android:visibility="visible"
+        app:srcCompat="@drawable/personicon"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"/>
+
+    <TextView
+        android:id="@+id/usernameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
+        android:text="Player 1"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/rollBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/usernameTxt"
+        android:layout_marginStart="89dp"
+        android:layout_toEndOf="@+id/usernameTxt"
+        android:text="Roll"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rollBtn"
+        android:layout_toEndOf="@+id/rollBtn"
+        app:srcCompat="@drawable/dice"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="menu"
+        android:textSize="8sp"/>
+
+    <LinearLayout
+        android:id="@+id/scoringArea"
+        android:layout_width="150dp"
+        android:layout_height="400dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="26dp"
+        android:orientation="vertical">
+
+        <TableRow
+            android:id="@+id/scoresRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/acesTxt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="Aces:"
+                android:textColor="@color/scoreCardText"/>
+
+            <TextView
+                android:id="@+id/acesScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="0"
+                android:textColor="@color/scoreCardText"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/scoresRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/twosTxt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="Twos:"
+                android:textColor="@color/scoreCardText"/>
+
+            <TextView
+                android:id="@+id/twosScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="0"
+                android:textColor="@color/scoreCardText"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/scoresRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/threesTxt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="Threes:"
+                android:textColor="@color/scoreCardText"/>
+
+            <TextView
+                android:id="@+id/threesScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="0"
+                android:textColor="@color/scoreCardText"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/scoresRow4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/foursTxt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="Fours:"
+                android:textColor="@color/scoreCardText"/>
+
+            <TextView
+                android:id="@+id/foursScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="0"
+                android:textColor="@color/scoreCardText"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/scoresRow5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fivesTxt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="Fives:"
+                android:textColor="@color/scoreCardText"/>
+
+            <TextView
+                android:id="@+id/fivesScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="0"
+                android:textColor="@color/scoreCardText"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/scoresRow6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/sixesTxt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="Sixes:"
+                android:textColor="@color/scoreCardText"/>
+
+            <TextView
+                android:id="@+id/sixesScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="0"
+                android:textColor="@color/scoreCardText"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/scoresRow7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/upperTxt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="Subtotal:"
+                android:textColor="@color/scoreCardText"/>
+
+            <TextView
+                android:id="@+id/upperScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="0"
+                android:textColor="@color/scoreCardText"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/scoresRow8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/bonusTxt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="Bonus:"
+                android:textColor="@color/scoreCardText"/>
+
+            <TextView
+                android:id="@+id/bonusScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="0"
+                android:textColor="@color/scoreCardText"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/scoresRow9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/threeofkindTxt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="Three of a Kind:"
+                android:textColor="@color/scoreCardText"/>
+
+            <TextView
+                android:id="@+id/threeofkindScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="0"
+                android:textColor="@color/scoreCardText"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/scoresRow10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fourofakindTxt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="Four of a Kind:"
+                android:textColor="@color/scoreCardText"/>
+
+            <TextView
+                android:id="@+id/fourofakindScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="0"
+                android:textColor="@color/scoreCardText"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/scoresRow11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fullhouseTxt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="Full House:"
+                android:textColor="@color/scoreCardText"/>
+
+            <TextView
+                android:id="@+id/fullhouseScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="0"
+                android:textColor="@color/scoreCardText"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/scoresRow12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/smstraightTxt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="Small Straight:"
+                android:textColor="@color/scoreCardText"/>
+
+            <TextView
+                android:id="@+id/smstraightScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:onClick=""
+                android:padding="2dp"
+                android:text="0"
+                android:textColor="@color/scoreCardText"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/scoresRow13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lgStraightTxt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="Large Straight:"
+                android:textColor="@color/scoreCardText"/>
+
+            <TextView
+                android:id="@+id/lgStraightScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:padding="2dp"
+                android:text="0"
+                android:textColor="@color/scoreCardText"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/scoresRow14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/yahtzeeTxt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border_yahtzee"
+                android:padding="2dp"
+                android:text="YAHTZEE:"
+                android:textColor="@color/yahtzee"/>
+
+            <TextView
+                android:id="@+id/yahtzeeScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border_yahtzee"
+                android:padding="2dp"
+                android:text="0"
+                android:textColor="@color/yahtzee"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/scoresRow15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/chanceTxt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:text="Chance:"
+                android:textColor="@color/scoreCardText"/>
+
+            <TextView
+                android:id="@+id/chanceScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:text="0"
+                android:textColor="@color/scoreCardText"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/scoresRow16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/totalFullTxt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:text="TOTAL:"
+                android:textColor="@color/scoreCardText"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/totalFullScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_border"
+                android:text="0"
+                android:textColor="@color/scoreCardText"
+                android:textSize="24dp"/>
+
+        </TableRow>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/dice1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/scoringArea"
+        android:layout_marginStart="28dp"
+        android:layout_toEndOf="@+id/scoringArea"
+        android:background="@drawable/dice_selector"/>
+
+    <Button
+        android:id="@+id/dice3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/dice1"
+        android:layout_gravity="center_horizontal"
+        android:layout_toEndOf="@+id/rollBtn"
+        android:background="@drawable/dice_selector"/>
+
+    <Button
+        android:id="@+id/dice2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/dice3"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="27dp"
+        android:layout_toStartOf="@+id/dice3"
+        android:background="@drawable/dice_selector"/>
+
+    <Button
+        android:id="@+id/dice4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/dice1"
+        android:layout_below="@+id/dice2"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/dice_selector"/>
+
+    <Button
+        android:id="@+id/dice5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/dice4"
+        android:layout_alignBottom="@+id/dice4"
+        android:layout_toEndOf="@+id/dice2"
+        android:background="@drawable/dice_selector"/>
+
+
+</RelativeLayout>
